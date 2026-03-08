@@ -1,8 +1,12 @@
 import serpapi
 import requests
+import os
 
+SERPAPI_KEY = os.getenv("API_KEY")
+TELEGRAM_TOKEN = os.getenv("TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 params = {
-  "api_key": "592ac9da763605db106ac61d87803791d0606d2c286da2aba2a2ec8bdd17f4c6",
+  "api_key": SERPAPI_KEY,
   "engine": "google_flights",
   "hl": "en",
   "gl": "us",
@@ -21,7 +25,7 @@ params = {
 }
 
 params2 = {
-  "api_key": "592ac9da763605db106ac61d87803791d0606d2c286da2aba2a2ec8bdd17f4c6",
+  "api_key": SERPAPI_KEY,
   "engine": "google_flights",
   "hl": "en",
   "gl": "us",
@@ -99,8 +103,7 @@ for i, option in enumerate(data2.get("other_flights", []), start=1):
 text = "\n".join(results)
 print(text)
 
-TOKEN="8232762652:AAEEBVRFpC059t2R8OE3Q-HL7mTsGgOrLmg"
-CHAT_ID="6426367079"
+TOKEN=TELEGRAM_TOKEN
 requests.post(
     f"https://api.telegram.org/bot{TOKEN}/sendMessage",
     json={
