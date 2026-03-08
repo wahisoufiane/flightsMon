@@ -21,7 +21,7 @@ params = {
   "sort_by": "2",
   "adults": "1",
   "exclude_conns": "BAH,AMM,KWI,DOH,MCT,BEY,LHR,AUH,DXB,RKT,SHJ",
-  "max_price": "500"
+  "max_price": "400"
 }
 
 params2 = {
@@ -40,7 +40,7 @@ params2 = {
   "sort_by": "2",
   "adults": "1",
   "exclude_conns": "BAH,AMM,KWI,DOH,MCT,BEY,LHR,AUH,DXB,RKT,SHJ",
-  "max_price": "400"
+  "max_price": "600"
 }
 
 data = serpapi.search(params)
