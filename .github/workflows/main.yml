@@ -19,3 +19,7 @@ jobs:
       - run: pip install requests serpapi
 
       - run: python flightsMon.py
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
